@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchWrapper", "Ela
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elasticsearch.DatabaseSeeder", "Elastisearch.DatabaseSeeder\Elasticsearch.DatabaseSeeder.csproj", "{600977FC-FF76-4AAF-A177-EF226D643A20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elasticsearch.CVLMigrator", "Elasticsearch.CVLMigrator\Elasticsearch.CVLMigrator.csproj", "{18A93CE6-E3B5-4B5F-B050-891303B7F760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{600977FC-FF76-4AAF-A177-EF226D643A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{600977FC-FF76-4AAF-A177-EF226D643A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{600977FC-FF76-4AAF-A177-EF226D643A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A93CE6-E3B5-4B5F-B050-891303B7F760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A93CE6-E3B5-4B5F-B050-891303B7F760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A93CE6-E3B5-4B5F-B050-891303B7F760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A93CE6-E3B5-4B5F-B050-891303B7F760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
