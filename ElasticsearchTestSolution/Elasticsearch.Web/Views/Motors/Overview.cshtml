@@ -1,0 +1,40 @@
+﻿@model Elasticsearch.Web.ViewModels.VehicleDashboardViewModel
+
+@{
+    ViewBag.Title = "Overview";
+}
+
+<div class="col-sm-12">
+    <h2>Overview</h2>
+</div>
+
+<div class="col-sm-12 small-margin-bottom">
+    @using (Html.BeginForm("PerformSearch", "Motors", FormMethod.Post, new { @class= "form-inline" }))
+    {
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.SearchTerm, new {@class = "form-control"})
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+    }
+</div>
+
+<div class="col-sm-12">
+    <table class="table">
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year Registered</th>
+            <th></th>
+        </tr>
+    
+        @foreach (var vehicle in Model.Vehicles)
+        {
+            <tr>
+                <td>@vehicle.Make</td>
+                <td>@vehicle.Model</td>
+                <td>@vehicle.YearRegistered</td>
+                <td>@Html.ActionLink("Edit", "EditVehicle", new {id = vehicle.Id.ToString()})</td>
+            </tr>
+        }
+    </table>
+</div>

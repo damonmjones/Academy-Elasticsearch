@@ -1,0 +1,30 @@
+﻿@model Elasticsearch.Web.ViewModels.EditVehicleViewModel
+
+@{
+    ViewBag.Title = "EditVehicle";
+}
+
+<div class="col-sm-12">
+    <h2>Edit Vehicle</h2>
+</div>
+
+<div class="col-sm-12">
+    @using (Html.BeginForm("UpdateVehicle", "Motors", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.Vehicle.Id)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Vehicle.Make)
+            @Html.TextBoxFor(m => m.Vehicle.Make, new {@class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Vehicle.Model)
+            @Html.TextBoxFor(m => m.Vehicle.Model, new {@class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Vehicle.YearRegistered)
+            @Html.TextBoxFor(m => m.Vehicle.YearRegistered, new {@class = "form-control"})
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a class="btn btn-danger" href="@Url.Action("Overview", "Motors")">Cancel</a>
+    }
+</div>
